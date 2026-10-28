@@ -13,6 +13,7 @@ ASSETS_DIR = BASE_DIR / "assets"
 API_ID = int(os.environ["API_ID"])
 API_HASH = os.environ["API_HASH"]
 SESSION_NAME = os.getenv("SESSION_NAME", "prank_session")
+SESSION_STRING = os.getenv("SESSION_STRING", "")
 
 # ---------- Audio ----------
 # Audio utama: selalu diputar pertama kali saat telepon diangkat
