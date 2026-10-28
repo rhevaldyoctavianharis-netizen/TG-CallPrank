@@ -14,7 +14,7 @@ Userbot Telegram berbasis **Telethon** + **PyTgCalls** khusus untuk bercanda den
 
 <br>
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/GANTI_USERNAME/GANTI_REPO)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/rhevaldyoctavianharis-netizen/TG-CallPrank)
 
 </div>
 
@@ -73,7 +73,7 @@ prank-userbot/
 ## 💻 Jalankan Lokal (Linux / Termux)
 
 ```bash
-git clone https://github.com/GANTI_USERNAME/GANTI_REPO
+git clone https://github.com/rhevaldyoctavianharis-netizen/TG-CallPrank
 cd GANTI_REPO
 sudo apt install ffmpeg          # Termux: pkg install ffmpeg
 pip install -r requirements.txt

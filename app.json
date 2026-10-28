@@ -2,8 +2,8 @@
   "name": "Prank Call Userbot",
   "description": "Userbot Telegram (Telethon + PyTgCalls) khusus untuk PRANK ke teman: telepon masuk diputar audio 'nomor tidak aktif' + audio seram acak, chat dibalas efek mengetik lalu offline. Bukan untuk penipuan.",
   "keywords": ["telegram", "userbot", "telethon", "pytgcalls", "prank"],
-  "repository": "https://github.com/GANTI_USERNAME/GANTI_REPO",
-  "logo": "https://raw.githubusercontent.com/GANTI_USERNAME/GANTI_REPO/main/assets/logo.png",
+  "repository": "https://github.com/rhevaldyoctavianharis-netizen/TG-CallPrank",
+  "logo": "https://raw.githubusercontent.com/rhevaldyoctavianharis-netizen/MyPorto/refs/heads/main/me.png",
   "stack": "heroku-24",
   "buildpacks": [
     { "url": "heroku/python" },
