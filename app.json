@@ -1,0 +1,48 @@
+{
+  "name": "Prank Call Userbot",
+  "description": "Userbot Telegram (Telethon + PyTgCalls) khusus untuk PRANK ke teman: telepon masuk diputar audio 'nomor tidak aktif' + audio seram acak, chat dibalas efek mengetik lalu offline. Bukan untuk penipuan.",
+  "keywords": ["telegram", "userbot", "telethon", "pytgcalls", "prank"],
+  "repository": "https://github.com/GANTI_USERNAME/GANTI_REPO",
+  "logo": "https://raw.githubusercontent.com/GANTI_USERNAME/GANTI_REPO/main/assets/logo.png",
+  "stack": "heroku-24",
+  "buildpacks": [
+    { "url": "heroku/python" },
+    { "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git" }
+  ],
+  "formation": {
+    "worker": { "quantity": 1 }
+  },
+  "env": {
+    "API_ID": {
+      "description": "API ID dari https://my.telegram.org",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "API HASH dari https://my.telegram.org",
+      "required": true
+    },
+    "SESSION_STRING": {
+      "description": "String session Telethon. Buat dengan `python generate_session.py` (RAHASIA, jangan dibagikan).",
+      "required": true
+    },
+    "ALLOWED_IDS": {
+      "description": "User ID Telegram teman yang boleh kena prank, pisahkan koma. Kosongkan = semua orang kena (tidak disarankan).",
+      "value": "",
+      "required": false
+    },
+    "MAX_CALL_SECONDS": {
+      "description": "Durasi maksimal telepon dalam detik (300 = 5 menit).",
+      "value": "300",
+      "required": false
+    },
+    "GAP_MIN": { "description": "Jeda hening minimum antar audio (detik).", "value": "1", "required": false },
+    "GAP_MAX": { "description": "Jeda hening maksimum antar audio (detik).", "value": "4", "required": false },
+    "CHAT_DELAY_MIN": { "description": "Delay minimum sebelum 'mengetik...' muncul (detik).", "value": "5", "required": false },
+    "CHAT_DELAY_MAX": { "description": "Delay maksimum sebelum 'mengetik...' muncul (detik).", "value": "40", "required": false },
+    "TYPING_MIN": { "description": "Lama minimum sekali mengetik (detik).", "value": "4", "required": false },
+    "TYPING_MAX": { "description": "Lama maksimum sekali mengetik (detik).", "value": "12", "required": false },
+    "BURSTS_MIN": { "description": "Minimum berapa kali mengetik-berhenti.", "value": "1", "required": false },
+    "BURSTS_MAX": { "description": "Maksimum berapa kali mengetik-berhenti.", "value": "3", "required": false },
+    "CHAT_COOLDOWN": { "description": "Cooldown prank chat per orang (detik).", "value": "120", "required": false }
+  }
+}
