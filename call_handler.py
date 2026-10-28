@@ -83,7 +83,7 @@ def register(call_py: PyTgCalls) -> None:
         sess.watchdog = asyncio.create_task(_watchdog(call_py, sess))
 
     # ---- satu audio selesai -> putar audio acak berikutnya ----
-    @call_py.on_update(filters.stream_end)
+    @call_py.on_update(filters.stream_end())
     async def on_stream_end(_, update: StreamEnded):
         sess = sessions.get(update.chat_id)
         if not sess or not sess.active:

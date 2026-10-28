@@ -27,6 +27,15 @@ async def main() -> None:
     client = TelegramClient(session, config.API_ID, config.API_HASH)
     call_py = PyTgCalls(client)
 
+    # Cek login dulu: kalau session tidak valid, berhenti dengan pesan jelas (bukan minta nomor HP)
+    log.info("SESSION_STRING terisi: %s (panjang %d)", bool(config.SESSION_STRING), len(config.SESSION_STRING))
+    await client.connect()
+    if not await client.is_user_authorized():
+        raise SystemExit(
+            "SESSION_STRING kosong/tidak valid/tidak cocok dengan API_ID & API_HASH. "
+            "Buat ulang dengan generate_session.py memakai API_ID & API_HASH yang SAMA dengan di Config Vars."
+        )
+
     chat_handler.register(client)
     call_handler.register(call_py)
 
